@@ -1,0 +1,31 @@
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Focus App.exe
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Focus App.deps.json
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Focus App.runtimeconfig.json
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Focus App.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Focus App.pdb
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App.csproj.AssemblyReference.cache
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App_MarkupCompile.cache
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App.g.resources
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App.AssemblyInfoInputs.cache
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App.AssemblyInfo.cs
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App.csproj.CoreCompileInputs.cache
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\refint\Focus App.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App.pdb
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App.genruntimeconfig.cache
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\ref\Focus App.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Ookii.Dialogs.Wpf.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\obj\Debug\net7.0-windows\Focus App.csproj.CopyComplete
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Notification.Wpf.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Diagnostics.EventLog.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Focus App.dll.config
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
