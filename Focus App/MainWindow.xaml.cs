@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -21,13 +22,16 @@ namespace Focus_App;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private readonly ObservableCollection<string> todoItems = new();
     private readonly Timer _timer = new();
+    private readonly ObservableCollection<string> todoItems = new();
     private int notFocusCount;
+    private int defultSce = 20;
 
     public MainWindow()
     {
         InitializeComponent();
+        StartButton.IsEnabled = true;
+        StopButton.IsEnabled = false;
         foreach (var s in new SaveLoad().LoadListBoxContentFromFile())
         {
             todoItems?.Add(s);
@@ -35,6 +39,74 @@ public partial class MainWindow : Window
 
         listBox.ItemsSource = todoItems;
     }
+
+    protected override void OnClosing(CancelEventArgs e)
+    {
+        SetStartup(true);
+        e.Cancel = true;
+        Hide();
+        Sec.Text = defultSce.ToString();
+        if (StartButton.IsEnabled)
+        {
+            ButtonStart_Click(default, default);
+        }
+    }
+
+    private static void SetStartup(bool enable)
+    {
+        // 取得啟動資料夾的路徑
+        var startupFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Startup));
+
+        // 取得你的應用程式的執行檔路徑
+        var appPath = GetApplicationPath();
+
+        try
+        {
+            var focusAppLnk = "Focus App.lnk";
+            if (enable)
+            {
+                // 將應用程式的快捷方式複製到啟動資料夾
+                var shortcutPath = Path.Combine(startupFolderPath, focusAppLnk);
+                CreateShortcut(shortcutPath, appPath);
+            }
+            else
+            {
+                // 刪除應用程式的快捷方式從啟動資料夾
+                var shortcutPath = Path.Combine(startupFolderPath, focusAppLnk);
+                if (File.Exists(shortcutPath))
+                {
+                    File.Delete(shortcutPath);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // 處理例外情況
+            Console.WriteLine("發生錯誤：" + ex.Message);
+        }
+    }
+
+    private static void CreateShortcut(string shortcutPath, string targetPath)
+    {
+        // 快捷方式的名称（不需要文件扩展名）
+        var shortcutName = "MyShortcut";
+
+        // 使用 COM 组件来创建快捷方式
+        dynamic shell = Activator.CreateInstance(Type.GetTypeFromProgID("WScript.Shell"));
+        var shortcut = shell.CreateShortcut(shortcutPath);
+
+        // 设置快捷方式的属性
+        shortcut.TargetPath = targetPath; // 设置目标路径
+        shortcut.WorkingDirectory = Path.GetDirectoryName(targetPath); // 设置工作目录
+        shortcut.Description = "My shortcut description"; // 设置描述
+
+        // 保存快捷方式
+        shortcut.Save();
+    }
+
+    private static string GetApplicationPath() =>
+        // 取得當前應用程式的執行檔路徑
+        Process.GetCurrentProcess().MainModule.FileName;
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
@@ -66,11 +138,28 @@ public partial class MainWindow : Window
         return dlg.FileName;
     }
 
+    protected override void OnActivated(EventArgs e)
+    {
+        base.OnActivated(e);
+
+        // 在這裡寫顯示視窗的邏輯，比如顯示視窗並將焦點設定到它
+        Show();
+        Activate();
+    }
+
     private void ButtonStart_Click(object sender, RoutedEventArgs e)
     {
+        new SaveLoad().SaveListBoxContentToFile(todoItems.ToList());
         StartButton.IsEnabled = false;
+        StopButton.IsEnabled = true;
         Info.Text = "專注中";
-        _timer.Interval = TimeSpan.FromSeconds(int.Parse(Sec.Text)).TotalMilliseconds;
+        if (!int.TryParse(Sec.Text, out var sec))
+        {
+            sec = defultSce;
+            Sec.Text = sec.ToString();
+        }
+
+        _timer.Interval = TimeSpan.FromSeconds(sec).TotalMilliseconds;
         _timer.AutoReset = true;
         _timer.Elapsed += CheckWindows;
         _timer.Start();
@@ -82,7 +171,7 @@ public partial class MainWindow : Window
             try
             {
                 var path = new WindowsControl().GetPath();
-                var firstOrDefault = todoItems.FirstOrDefault(x => x == path);
+                var firstOrDefault = todoItems.FirstOrDefault(x => string.Equals(x, path, StringComparison.CurrentCultureIgnoreCase));
                 if (string.IsNullOrEmpty(firstOrDefault))
                 {
                     var _notificationManager = new NotificationManager();
@@ -107,14 +196,21 @@ public partial class MainWindow : Window
     protected override void OnClosed(EventArgs e)
     {
         _timer?.Dispose();
-        new SaveLoad().SaveListBoxContentToFile(todoItems.ToList());
         base.OnClosed(e);
     }
 
     private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
     {
-        Regex regex = new Regex("[^0-9]+"); // 只允許數字
+        var regex = new Regex("[^0-9]+"); // 只允許數字
         e.Handled = regex.IsMatch(e.Text);
+    }
+
+    private void ButtonStop_Click(object sender, RoutedEventArgs e)
+    {
+        StartButton.IsEnabled = true;
+        StopButton.IsEnabled = false;
+        _timer.Stop();
+        _timer.Elapsed -= CheckWindows;
     }
 }
 

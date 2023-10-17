@@ -27,8 +27,9 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <Button Content="Add" Click="Button_Click" />
             <Button Name="StartButton" Content="Start" Click="ButtonStart_Click" />
+            <Button Name="StopButton" Content="Stop" Click="ButtonStop_Click" />
             <TextBlock Text="Sec" />
-            <TextBox Width="60"  Name="Sec" PreviewTextInput="TextBox_PreviewTextInput" />
+            <TextBox Width="60" Name="Sec" PreviewTextInput="TextBox_PreviewTextInput" />
             <TextBlock Name="Info" />
         </StackPanel>
     </Grid>

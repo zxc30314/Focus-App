@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="CliWrap" Version="3.6.4"/>
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
         <PackageReference Include="Notification.Wpf" Version="7.0.0"/>
         <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1"/>

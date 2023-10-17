@@ -29,3 +29,4 @@ C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\runtim
 C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Diagnostics.EventLog.dll
 C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Focus App.dll.config
 C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\zxc30\RiderProjects\Focus App\Focus App\bin\Debug\net7.0-windows\CliWrap.dll

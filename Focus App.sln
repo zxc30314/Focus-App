@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Focus App", "Focus App\Focus App.csproj", "{4023514C-20B7-4233-8696-C014B0E26CE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerService1", "WorkerService1\WorkerService1.csproj", "{BCB1D812-9C26-4217-B8BB-DB0511C6EFCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{4023514C-20B7-4233-8696-C014B0E26CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4023514C-20B7-4233-8696-C014B0E26CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4023514C-20B7-4233-8696-C014B0E26CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCB1D812-9C26-4217-B8BB-DB0511C6EFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB1D812-9C26-4217-B8BB-DB0511C6EFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB1D812-9C26-4217-B8BB-DB0511C6EFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB1D812-9C26-4217-B8BB-DB0511C6EFCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

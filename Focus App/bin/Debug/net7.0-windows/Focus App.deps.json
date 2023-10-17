@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "Focus App/1.0.0": {
         "dependencies": {
+          "CliWrap": "3.6.4",
           "Newtonsoft.Json": "13.0.3",
           "Notification.Wpf": "7.0.0",
           "Ookii.Dialogs.Wpf": "5.0.1",
@@ -15,6 +16,14 @@
         },
         "runtime": {
           "Focus App.dll": {}
+        }
+      },
+      "CliWrap/3.6.4": {
+        "runtime": {
+          "lib/netcoreapp3.0/CliWrap.dll": {
+            "assemblyVersion": "3.6.4.0",
+            "fileVersion": "3.6.4.0"
+          }
         }
       },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
@@ -103,6 +112,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CliWrap/3.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KVGVZlR0GWgN3Xr88oZMSzYu38TXIogwLz588e6wku3mIfg6lPchxpYWtZSZfurpTY63ANF61xWp8EZF3jkN4g==",
+      "path": "cliwrap/3.6.4",
+      "hashPath": "cliwrap.3.6.4.nupkg.sha512"
     },
     "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
       "type": "package",
